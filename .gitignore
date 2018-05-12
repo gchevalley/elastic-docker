@@ -4,5 +4,5 @@
 passwords
 
 esdata/*
-!esdata/.keep
+!esdata/.gitkeep
 
