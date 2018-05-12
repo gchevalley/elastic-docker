@@ -1,0 +1,14 @@
+elasticsearch:
+  image: blacktop/elasticsearch:5.6
+  volumes:
+    - "$PWD/esdata:/usr/share/elasticsearch/data"
+
+nginx:
+  image: nginx
+  ports:
+    - "8080:8080"
+  links:
+    - elasticsearch
+  volumes:
+    - "$PWD/default.conf:/etc/nginx/conf.d/default.conf"
+    - "$PWD/passwords:/etc/nginx/.htpasswd"

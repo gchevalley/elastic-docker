@@ -1,0 +1,8 @@
+*.csr
+*.key
+*.crt
+passwords
+
+esdata/*
+!esdata/.keep
+
